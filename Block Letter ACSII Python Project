@@ -1,0 +1,11 @@
+# Matthew Stafford
+# I love my gf!
+print(''' 
+M   M    SSS 
+MM MM   S  S
+MM MM   S
+M M M    SSS
+M   M       S
+M   M   S   S
+M   M    SSS
+''')
