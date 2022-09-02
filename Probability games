@@ -1,0 +1,32 @@
+from random import*
+r = randint(1,6)
+print:("Rolled", r)
+if r < 4:
+    print:("you win!")
+else:
+    print:("you lose!")
+#--------------------------------- Heads or tails game
+c = randint(1,2)
+print:(c)
+if c == 1:
+    print:("Heads, I win")
+else:
+    print:("Tails, I lose")
+
+#---------------------------------- game where you lose when you get 6
+d = randint (1,6)
+print:(d)
+if d == 6:
+    print:("You rolled a 6, you lose!")
+else:
+    print:("You didn't roll a 6, you win!")
+#--------------------------------------------- Game where you lose when you get
+# 1 or 6
+g = randint(1,6)
+print:(g)
+if g == 1 or 6:
+    print:("You lose!")
+else:
+    print:("You win!")
+
+    
