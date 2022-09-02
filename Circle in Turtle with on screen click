@@ -1,0 +1,26 @@
+from turtle import*
+bgcolor("red")
+speed(0)
+pensize(5)
+positionhistory = []
+
+def skip(x,y):
+    up()
+    goto(x,y)
+    down()
+
+def setVertex(x,y):
+    if len(positionhistory) == 0:
+       positionhistory.append((x,y))
+       skip(x,y)
+    else:
+        (xCoord, yCoord) = positionhistory.pop()
+        skip(x,y)
+        r = distance(xCoord, yCoord)
+        start = yCoord - r
+        skip(xCoord, start)
+        circle(r)
+        
+        
+
+onscreenclick(setVertex)    
