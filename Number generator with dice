@@ -1,0 +1,15 @@
+from random import*
+s= int(input("how many sides:"))
+n= int(input("Number of tmes to roll:"))
+
+print("Rolling:", n, "d", s)
+
+total=0
+for i in range(n):
+    roll= randint(1,s) 
+    total = total + roll
+
+print(total)
+
+
+
