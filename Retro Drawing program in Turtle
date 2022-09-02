@@ -1,0 +1,23 @@
+from turtle import*
+goto(-350, 300)
+write("Arrows kesy move the turtle"), move=True, align="Left",
+font=("Arial", 14, "bold"))
+
+
+onkey(lambda:forward(5), "Up")
+onkey(lambda:backward(5), "Down")
+onkey(lambda:left(5), "Left")
+onkey(lambda:right(5), "Right")
+onkey(clear, "c")
+onkey(home, "h")
+onkey(up, "u")
+onkey(down, "d")
+onkey(lambda:color("red"), 1)
+onkey(lambda:color("blue"), 2)
+onkey(lambda:color("purple"), 3)
+onkey(lambda:color("orange"), 4)
+onkey(lambda:bgcolor("black"), 5)
+onkey(lambda:bgcolor("cyan"), 6)
+onkey(lambda:bgcolor("purple"), 7)
+
+listen()
