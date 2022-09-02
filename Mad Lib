@@ -1,0 +1,23 @@
+w1 = input("name: ")
+w2 = input("noun: ")
+w3 = input("number: ")
+w4 = input("emotion: ")
+w5 = input("noun: ")
+w6 = input("relative: ")
+w7 = input("adjective: ")
+w8 = input("emotion: ")
+
+s1= "Hello my name is astronaunt" + w1 + "."
+s2= "I am on my way to planet" + w2 + "."
+s3= "I will be gone for" + w3 + "days."
+s4= "I am very" + w4 + "about the trip,but I will miss my" + w5 + "."
+s5= "Luckily my" + w6 + "packed me a jacket to keep me" + w7 + "."
+s6= "I could not be more" + w8 + "for this trip!"
+
+print(s1)
+print(s2)
+print(s3)
+print(s4)
+print(s5)
+print(s6)
+3
