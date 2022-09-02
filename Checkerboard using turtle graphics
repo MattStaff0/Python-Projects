@@ -1,0 +1,81 @@
+from turtle import*
+from random import*
+speed(0)
+x = -200
+y = 115
+width = 20
+
+
+def square(length, color):
+    pencolor(color)
+    fillcolor(color)
+    begin_fill()
+    for count in range(4):
+        forward(length)
+        left(90)
+    end_fill()
+
+x = -200
+y = 115
+width = 20
+
+
+for count in range(10):
+    up()
+    goto(x, y)
+    down()
+    square(width, "blue")
+    x = x + 20
+    up()
+    goto(x, y)
+    square(width, "red")
+    x = x + 20
+    up()
+    goto(x, y)
+    
+    
+x = -200
+y = 95
+for i in range(10):
+    up()
+    goto(x, y)
+    down()
+    square(width, "red")
+    x = x + 20
+    up()
+    goto(x, y)
+    square(width, "blue")
+    x = x + 20
+    up()
+    goto(x, y)
+
+x = -200
+y = 75
+for i in range(10):
+    up()
+    goto(x, y)
+    down()
+    square(width, "blue")
+    x = x + 20
+    up()
+    goto(x, y)
+    square(width, "red")
+    x = x + 20
+    up()
+    goto(x, y)
+
+x = -200
+y = 55
+for i in range(10):
+    up()
+    goto(x, y)
+    down()
+    square(width, "red")
+    x = x + 20
+    up()
+    goto(x, y)
+    square(width, "blue")
+    x = x + 20
+    up()
+    goto(x, y)
+    
