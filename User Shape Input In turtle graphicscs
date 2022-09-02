@@ -1,0 +1,24 @@
+from turtle import*
+bgcolor("Black")
+sides = int(numinput("Shape side", "How many sides should the shape have",
+default=5,
+minval=1,
+maxval=10))
+
+length = numinput("Shape length", "How long should the shape be?", default=50,
+minval=30,
+maxval=200)
+
+linecolor = textinput("Shape Color", "What color are the lines?")
+
+fillercolor = textinput("Fill Color", "What fill color is the shape?")
+
+pencolor(linecolor)
+fillcolor(fillercolor)
+begin_fill()
+for count in range(10):
+    for count in range(sides):
+        forward(length)
+        left(360/sides)
+    left(36)
+end_fill()
