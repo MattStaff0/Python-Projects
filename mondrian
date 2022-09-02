@@ -1,0 +1,48 @@
+from turtle import*
+from random import*
+speed(0)
+colormode(255)
+pensize(3)
+
+level = numinput("Input Dialog", "Enter the level",default = 1, minval = 1)
+if level > 6:
+    tracer(False)
+
+def drawrec(x1,y1,x2,y2):
+    pencolor(rancolor())
+    up()
+    fillcolor(rancolor())
+    begin_fill()
+    goto(x1,y1)
+    down()
+    goto(x2,y1)
+    goto(x2, y2)
+    goto(x1,y2)
+    goto(x1,y1)
+    end_fill()
+
+def rancolor():
+    r=randint(0,255)
+    b=randint(0,255)
+    g=randint(0,255)
+    return (r,g,b)
+
+def mondrian(x1,y1,x2,y2,level):
+    if level>0:
+        drawrec(x1,y1,x2,y2)
+        if randint(1,2)==1:
+            mondrian(x1,y1,((x2-x1)/3)+x1,y2,level-1)
+            mondrian((x2-x1)/3+x1,y1,x2,y2,level-1)
+        else:
+            mondrian(x1,y1,x2,((y2-y1)/3)+y1,level-1)
+            mondrian(x1,(y2-y1)/3+y1,x2,y2,level-1)
+            
+        
+
+
+        
+mondrian(-360,-337.5,360,337.5,level)
+
+if level>6:
+    update()
+    
