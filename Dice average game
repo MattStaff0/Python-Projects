@@ -1,0 +1,17 @@
+from random import*
+total=0
+for i in range(10):
+    roll = randint(1,6)
+    total = total + roll
+print(total)    
+
+if total < 35:
+    print("You rolled below average!")
+else:
+    print("You rolled above average!")
+if total == 35:
+    print("You rolled average!")
+
+
+
+ 
