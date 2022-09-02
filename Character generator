@@ -1,0 +1,57 @@
+from random import*
+
+eq = ["Long Sword", "Macbook", "Suit and tie", "Bow and Arrow", "McChicken"]
+jobs = ["Bounty hunter", "Fortnite Pro", "Golfer", "Bum", "Mob Boss"]
+stats = ["STR:", "AGI:", "STA:", "PER:", "INT:", "LUCK:"]
+outcome = [" died in a freak ccident where you died from a McChicken",
+           " got a STD", " didn't make it out of the duegon", " killed the King", " got DOMINATED by the Spider Queen", " got hella loot from the king",
+           " got a girlfriend",
+           " got lost in the cave", " alligned with the dark side", " went missing and never was found again"]
+
+characternum = int(input("How many characters do you want to make:"))
+
+for i in range(characternum):
+
+    for stat in stats:
+        roll = randint(1,6) + randint(1,6) + randint(1,6)
+        print(stat,roll)
+
+    choice(jobs)
+    'bounty hunter '
+    choice(jobs)
+    'Bum '
+    choice(jobs)
+    'Fortnite Pro'
+    choice(jobs)
+    'Golfer '
+    choice(jobs)
+    'Mob boss '
+    print("Job:", choice(jobs))
+
+    hp = randint(1,4)
+    print("Health:", hp)
+
+    for i in range(5):
+          r = randint(1,12) + randint(1,12) + randint(1,12) + randint(1,12) + randint(1,12)
+
+    print("Copper Pieces:", r)
+        
+
+    choice(eq)
+    'Long Sword '
+    choice(eq)
+    'Macbook '
+    choice(eq)
+    'Suit and Tie'
+    choice(eq)
+    'Bow and Arrow '
+    choice(eq)
+    'McChicken '
+    print("Random Item:", choice(eq))
+
+    name = input("What would you like to name your character?:")
+
+    print(name + choice(outcome))
+
+   
+       
