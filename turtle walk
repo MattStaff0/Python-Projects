@@ -1,0 +1,28 @@
+from turtle import*
+from random import*
+bgcolor("black")
+pensize(5)
+showturtle()
+shape("turtle")
+pencolor("red")
+
+maxX = window_width() / 2
+maxY = window_height() / 2
+for count in range(200):
+    forward(randint (10,60))
+    r = randint(1,3)
+    (x,y) = position()
+    if x > maxX or y > maxY or x < -maxX or y < -maxY :
+        left(180)
+        forward(r)
+    else:
+        if r == 1:
+            pencolor("red")
+            left(randint(45,135))
+        elif r == 3:
+            pencolor("yellow")
+            
+        else:
+            pencolor("cyan")
+            right(randint(35,90))
+             
