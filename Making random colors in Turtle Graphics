@@ -1,0 +1,17 @@
+from turtle import*
+from random import*
+colormode(255)
+
+def colorchange():
+    r = randint(0,255)
+    g = randint(0,255)
+    b = randint(0,255)
+    pencolor(r, b, g)
+    
+
+bgcolor("black")
+pensize(3)
+shape("circle")
+onscreenclick(goto)
+onscreenclick(lambda x,y: colorchange(), btn=2)
+listen()
