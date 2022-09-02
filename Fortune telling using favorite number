@@ -1,0 +1,13 @@
+num = int(input ("what is your favorite number?"))
+
+if num % 4 == 2:
+    print("Your gonna get dominated today!")
+
+elif num % 4 == 1:
+    print("Your gonna get lots of money today!")
+
+elif num % 4 == 3:
+    print("Your gonna make someone very mad at you today!")
+
+else:
+    print("Your gonna be blessed with meat today!")
