@@ -1,0 +1,169 @@
+from turtle import*
+from random import*
+colormode(255)
+speed(0)
+#Function for leaf
+bgcolor("dark blue")
+pencolor("white")
+pensize(2)
+x = randint(-300, 300)
+y = randint(-300, 300)
+
+
+
+
+#SNOWFLAKE 1
+def leaf(length):
+    forward(length)
+    left(45)
+    forward(length/2)
+    left(180)
+    forward(length/2)
+    left(90)
+    forward(length/2)
+    left(180)
+    forward(length/2)
+    right(135)
+
+    forward(length)
+    left(45)
+    forward(length/2)
+    left(180)
+    forward(length/2)
+    left(90)
+    forward(length/2)
+    left(180)
+    forward(length/2)
+    right(135)
+
+    forward(length)
+    left(45)
+    forward(length/2)
+    left(180)
+    forward(length/2)
+    left(90)
+    forward(length/2)
+    left(180)
+    forward(length/2)
+    right(135)
+
+    forward(length/6)
+    left(45)
+    forward(15)
+    left(180)
+    forward(15)
+    left(90)
+    forward(15)
+    left(180)
+    forward(15)
+    right(135)
+
+    forward(length/6)
+    left(45)
+    forward(length/2)
+    left(180)
+    forward(length/2)
+    left(90)
+    forward(length/2)
+    left(180)
+    forward(length/2)
+    right(135)
+    goto(x, y)
+
+    
+#for count in range(10):
+   # leaf(80)
+   # left(36)
+
+   
+# SNOWFLAKE 2
+def tri():
+    left(60)
+    forward(30)
+    right(45)
+    forward(15)
+    left(45)
+    forward(10)
+    right(50)
+    forward(10)
+def tri2():
+    right(60)
+    forward(30)
+    left(45)
+    forward(15)
+    right(45)
+    forward(10)
+    left(50)
+    forward(10)
+    
+def leaf2(length):
+    forward(length)
+    tri()
+    up()
+    backward(length)
+    down()
+    right(15)
+    forward(length)
+    tri2()
+
+#for count in range(70):
+   # leaf2(60)
+   # left(36)
+
+#SNOWFLAKE 3
+def leaf3(length):
+    forward(length/3)
+    right(90)
+    forward(length/6)
+    left(180)
+    forward(length/3)
+    backward(length/6)
+    right(90)
+    
+    forward(length/3)
+    right(90)
+    forward(length/6)
+    left(180)
+    forward(length/3)
+    backward(length/6)
+    right(90)
+
+    forward(length/3)
+    right(90)
+    forward(length/6)
+    left(180)
+    forward(length/3)
+    backward(length/6)
+    right(90)
+
+    forward(length/2)
+    left(60)
+    forward(length/3)
+    backward(length/3)
+    right(120)
+    forward(length/3)
+    backward(length/3)
+    left(60)
+    goto(x, y)
+
+far = randint(25,80)    
+#SNOWFLAKE GENERATOR
+def snowflake(length, leaf):
+    for i in range(10):
+        leaf(length)
+        left(36)
+            
+
+for i in range(10):
+    red = randint(100,255)
+    green = randint(0,100)
+    blue = randint(100,255)
+    x = randint(-300, 300)
+    y = randint(-300, 300)
+    pencolor((red, green, blue))
+    up()
+    goto(x, y)
+    down()
+    leaves = [leaf, leaf3]
+    snowflake(far, choice(leaves))
+   
