@@ -1,0 +1,32 @@
+from turtle import*
+values = {"length":40, "numsides":3, "color":"white"}
+
+def makeshape(length, numsides):
+    for i in range(numsides):
+        forward(length)
+        left(360/numsides)
+        
+def skip(x,y):
+    up()
+    goto(x,y)
+    down()
+
+def movedraw(x,y):
+    skip(x,y)
+    pencolor(values["color"])
+    makeshape(values["length"], values["numsides"])
+
+def changevalues(x, y):
+    values["color"] = textinput("color", "What color do you want your shape?")
+    values["numsides"] = int(numinput("numsides", "How many sides do you want your shape to be?", default = 3, minval = 3, maxval = 10))                           
+    values["length"] = int(numinput("length", "What length do you want your shape?", default = 3, minval = 3, maxval = 100))
+                             
+    
+
+pensize(3)
+bgcolor("grey")
+speed(0)
+hideturtle()
+onscreenclick(movedraw)
+onscreenclick(changevalues, btn=2)
+listen()
